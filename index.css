@@ -3,6 +3,7 @@
   --font-primary: "Lora", serif;
   --color-bg: #fff;
   --color-hero-title: #2C2A29;
+  --color-second-title: ##1F1F1F;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
@@ -11,6 +12,7 @@
   --radius-sm: 8px;
   --radius-lg: 24px;
   --max-width-hero: 1440px;
+  --max-width-second: 1376px;
 }
 
 /* Reset and Base Styles */
@@ -67,6 +69,79 @@ body {
   line-height: 22px;
 }
 
+/* Second Section */
+.second {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.second__content {
+  width: 100%;
+}
+
+.second__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.second__item--reverse {
+  flex-direction: column-reverse;
+  margin-top: var(--spacing-lg);
+}
+
+.second__image {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.second__text {
+  flex: 1;
+}
+
+.second__title {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 74px;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-second-title);
+}
+
+.second__descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.second__descriptions--reverse {
+  gap: var(--spacing-md);
+}
+
+.second__description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.second__description-title {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-second-title);
+}
+
+.second__description-content {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--color-second-title);
+}
 
 /* Desktop Adjustments */
 @media (min-width: 768px) {
@@ -95,5 +170,40 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+  }
+
+  .second {
+    margin-bottom: var(--spacing-xxl);
+  }
+
+  .second__content {
+    max-width: var(--max-width-second);
+  }
+
+  .second__item {
+    flex-direction: row;
+  }
+
+  .second__text {
+    padding: 0 48px 48px 49px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .second__text--reverse {
+    padding: 0 47px 70px 49px;
+  }
+
+  .second__image {
+    max-width: 50%;
+  }
+
+  .second__title {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .second__title--reverse {
+    margin-bottom: var(--spacing-xl);
   }
 }
